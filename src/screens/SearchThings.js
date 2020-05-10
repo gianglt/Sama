@@ -86,7 +86,6 @@ export class SearchThings extends Component {
     placeInput: {
       marginLeft: 10,
       width: '70%',
-      border:1,
 
     },
     placeButton: {

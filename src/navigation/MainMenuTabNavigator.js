@@ -5,9 +5,10 @@ import TabBarIcon from '../components/TabBarIcon';
 import MainMenu from '../screens/MainMenu';
 import SimpleSum from '../screens/SimpleSum';
 import SearchThings from '../screens/SearchThings';
+import ListData from '../screens/ListData';
 
 const BottomTab = createBottomTabNavigator();
-const INITIAL_ROUTE_NAME = 'SimpleSum';
+const INITIAL_ROUTE_NAME = 'MainMenu';
 
 export default function MainMenuTabNavigator({ navigation, route }) {
  
@@ -35,6 +36,14 @@ export default function MainMenuTabNavigator({ navigation, route }) {
         component={SearchThings}
         options={{
           title: 'Search Place',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-contacts" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="GetData"
+        component={ListData}
+        options={{
+          title: 'Get WebAPI',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-contacts" />,
         }}
       />

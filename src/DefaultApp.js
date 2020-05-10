@@ -47,7 +47,11 @@ export default function DefaultApp(props) {
       <View style={styles.container}>
         <NavigationContainer linking={LinkingConfiguration}>
           <Stack.Navigator>
-            <Stack.Screen name="Default" component={MainMenuTabNavigator} />
+            <Stack.Screen 
+            name="ReduxDemo" 
+            component={MainMenuTabNavigator} 
+            options={{ title: 'Redux Demoes'}}
+            />
             <Stack.Screen name="DefaultDemo" component={BottomTabNavigator} />
           </Stack.Navigator>
         </NavigationContainer>

@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
-import {Button} from 'react-native-elements';
+import React, { Component } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Button } from 'react-native-elements';
+//import { Button } from 'react-native';
 
 
 
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { increment, decrement } from '../redux/counter/actions';
 
 import Child from './components/Child';
@@ -32,19 +34,33 @@ class Main extends Component {
             }}
             >
                 <View style={{
-                    flex: 1,
-                    justifyContent:"center",
-                    alignItems:"center"
+                    height: 100,
+                    justifyContent: "center",
+                    alignItems: "center"
                 }}>
-                    <Child count={this.props.count}/>
+                    <Child count={this.props.count} />
                 </View>
-                <View style = {styles.rowButtons}>
-                    <Button style={styles.btnStyle}
+                <View style={styles.rowButtons}>
+                    <Button
                         title="Tăng"
-                       onPress={this.handleIncrease}/>
-                    <Button style={styles.btnStyle}
+                        icon={{
+                            name: "add-circle",
+                            size: 15,
+                            color: "white"
+                        }}                        
+                        buttonStyle={styles.btnStyle}
+                        containerStyle={styles.btncStyle}
+                        onPress={this.handleIncrease} />
+                    <Button
+                        icon={{
+                            name: "remove-circle",
+                            size: 15,
+                            color: "white"
+                        }}
                         title="Giảm"
-                        onPress={this.handleDecrease}/>
+                        buttonStyle={styles.btnStyle}
+                        containerStyle={styles.btncStyle}
+                        onPress={this.handleDecrease} />
                 </View>
 
             </View>
@@ -70,19 +86,19 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 24,
         fontWeight: "bold",
-        color: 'red'
+        color: "red"
     },
     btnStyle: {
-        width: 100,
-        height: 40,
-        backgroundColor: "#000099",
-        margin:10,
+        flex:1,
+        backgroundColor: "#008040",
+    },
+    btncStyle: {
+        flex:1,
+        height: 50,
+        margin: 10,
     },
     rowButtons: {
-        flex: 1,
-        flexDirection:"row",
-        padding:10,
-        alignItems:"center",
-        alignContent: "center",
+        flexDirection: "row",
+        height: 60,
     },
 });
