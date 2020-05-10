@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
- 
-import { increment, decrement } from '../redux/counter/actions';
-
 import {Button} from 'react-native-elements';
 
-import Child from '../components/Child';
+
+
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import { increment, decrement } from '../redux/counter/actions';
+
+import Child from './components/Child;
 
 
 

@@ -1,10 +1,15 @@
+import * as React from 'react';
+import { StyleSheet, View } from 'react-native';
+
+
 import { Ionicons } from '@expo/vector-icons';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { SplashScreen } from 'expo';
 import * as Font from 'expo-font';
-import * as React from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import MainMenuTabNavigator from './navigation/MainMenuTabNavigator';

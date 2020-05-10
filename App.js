@@ -1,9 +1,9 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import store from './src/redux/store';
-import { StyleSheet,Text} from 'react-native';
+
 
 import DefaultApp from './src/DefaultApp';
+import store from './src/redux/store';
 
 
 export default class App extends React.Component {
@@ -16,11 +16,3 @@ export default class App extends React.Component {
     }
   }
 
-
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-    }
-  }
-  );
