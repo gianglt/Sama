@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import { increment, decrement } from '../redux/counter/actions';
 
-import Child from './components/Child;
+import Child from './components/Child';
 
 
 
