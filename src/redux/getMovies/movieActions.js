@@ -1,20 +1,21 @@
-const url = "http://dummy.restapiexample.com/api/v1/employees";
+const url = "https://randomuser.me/api/?seed=1&page=3&results=10";
+//const url = "http://dummy.restapiexample.com/api/v1/employees";
 
-export const FETCH_PRODUCTS_BEGIN   = 's_FETCH_PRODUCTS_BEGIN';
-export const FETCH_PRODUCTS_SUCCESS = 's_FETCH_PRODUCTS_SUCCESS';
-export const FETCH_PRODUCTS_FAILURE = 's_FETCH_PRODUCTS_FAILURE';
+export const FETCH_DATA_BEGIN   = 'FETCH_DATA_BEGIN';
+export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
+export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE';
 
 export const fetchTheDataBegin = () => ({
-  type: FETCH_PRODUCTS_BEGIN
+  type: FETCH_DATA_BEGIN
 });
 
 export const fetchTheDataSuccess = items => ({
-  type: FETCH_PRODUCTS_SUCCESS,
+  type: FETCH_DATA_SUCCESS,
   payload: { items }
 });
 
 export const fetchTheDataFailure = error => ({
-  type: FETCH_PRODUCTS_FAILURE,
+  type: FETCH_DATA_FAILURE,
   payload: { error }
 });
 
@@ -25,9 +26,9 @@ export function fetchTheData() {
         .then(handleErrors)
         .then(res => res.json())
         .then(json => {
-          dispatch(fetchTheDataSuccess(json.data));
-          //console.log(json.data);
-          return json.data;
+          dispatch(fetchTheDataSuccess(json.results));
+          //console.log(json.results);
+          return json.results;
         })
         .catch(error => dispatch(fetchTheDataFailure(error)));
     };

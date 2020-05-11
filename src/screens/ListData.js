@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchTheData } from "../redux/getMovies/movieActions";
+import Person from './components/Person';
+
 
 import { ScrollView } from "react-native-gesture-handler";
 import { View, Text, ListItem, FlatList, TouchableOpacity } from 'react-native';
@@ -13,13 +15,7 @@ class ListData extends React.Component {
     renderItem = ({ item }) => {
         console.log({ item });
         return (
-            <TouchableOpacity>
-                <View >
-                    <Text>
-                        {item.employee_name}
-                    </Text>
-                </View>
-            </TouchableOpacity>
+            <Person person={item}/>
         );
     }
 

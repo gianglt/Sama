@@ -13,7 +13,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import BottomTabNavigator from './navigation/BottomTabNavigator';
 import MainMenuTabNavigator from './navigation/MainMenuTabNavigator';
-import LinkingConfiguration from './navigation/LinkingConfiguration';
 
 const Stack = createStackNavigator();
 
@@ -45,7 +44,7 @@ export default function DefaultApp(props) {
   } else {
     return (
       <View style={styles.container}>
-        <NavigationContainer linking={LinkingConfiguration}>
+        <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen 
             name="ReduxDemo" 

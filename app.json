@@ -25,6 +25,11 @@
     "ios": {
       "supportsTablet": true
     },
+    "android": {
+      "icon": "./src/assets/images/favicon.png",
+      "package": "com.yourcompany.yourappname",
+      "versionCode": 1	  
+    },
     "web": {
       "favicon": "./src/assets/images/favicon.png"
     }
